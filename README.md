@@ -7,7 +7,8 @@
 
 * node.js
 * express
-* mongoDB
+* express-handlebars
+* mongoDB (-mongoose-)
 * axios
 * bootstrap
 * cheerio
