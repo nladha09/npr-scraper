@@ -40,22 +40,22 @@ $(document).ready(() => {
         // take a single JSON object and create jQuery element composed of formatted HTML
         let panel = $(
             `<div class="panel panel-default panel-margin">
-              <div id="headline-panel" class="panel-heading clearfix">
+            <div id="headline-panel" class="panel-heading clearfix">
                 <p class="panel-title align-middle"><a href="${article.url}" target="_blank">${article.title}</a></p>
                 <button type="button" class="btn btn-danger pull-right delete">Delete From Saved</button>
                 <button type="button" class="btn btn-info pull-right notes">Article Notes</button>
                 
-              </div>
-              <div class="panel-body">
+            </div>
+            <div class="panel-body">
                 <div class="col-lg-2 col-md-2 col-sm-2 news-thumb" >
                 <a href="${article.url}" target="_blank"><img width="200px" class="img-responsive 
-                  img-thumbnail news-thumb" src="${article.imgUrl}" alt="${article.title}" /></a>
+                img-thumbnail news-thumb" src="${article.imgUrl}" alt="${article.title}" /></a>
                 </div> 
                 <div class="col-lg-10 col-md-10 col-sm-10 summary-text" >
                 <p>${article.summary}</p>
                 </div> 
-              </div>
-          </div>`
+            </div>
+        </div>`
         );
         // attach article id to determine article to save
         panel.data("_id", article._id);
@@ -67,16 +67,16 @@ $(document).ready(() => {
         // we don't have any saved articles!
         const emptyAlert = $(
             `<div class='alert alert-info text-center'>
-          <h4>Looks like we don't have any saved articles.</h4>
-          </div>
-          <div class='panel panel-default'>
-          <div class='panel-heading text-center'>
-          <h3>Would You Like To Browse Available Articles?</h3>
-          </div>
-          <div class='panel-body text-center'>
-          <h4><a href='/'>Browse Articles</a></h4>
-          </div>
-          </div>`
+            <h4>Looks like we don't have any saved articles.</h4>
+            </div>
+            <div class='panel panel-default'>
+            <div class='panel-heading text-center'>
+            <h3>Would You Like To Browse Available Articles?</h3>
+            </div>
+            <div class='panel-body text-center'>
+            <h4><a href='/'>Browse Articles</a></h4>
+            </div>
+            </div>`
         );
         // append alert data to main container
         articleContainer.append(emptyAlert);
@@ -132,12 +132,12 @@ $(document).ready(() => {
             // construct notes HTML
             let modalText =
                 `<div class="container-fluid text-center">
-          <h4>Notes For Article: ${currentArticle._id}</h4>
-          <hr />
-          <ul class="list-group note-container"></ul>
-          <textarea class="note-textarea" placeholder="New Note" rows="4" cols="70"></textarea>
-          <button class="btn btn-success save">Save Note</button>
-          </div>`;
+            <h4>Notes For Article: ${currentArticle._id}</h4>
+            <hr />
+            <ul class="list-group note-container"></ul>
+            <textarea class="note-textarea" placeholder="New Note" rows="4" cols="70"></textarea>
+            <button class="btn btn-success save">Save Note</button>
+            </div>`;
             // add HTML to note modal
             bootbox.dialog({
                 message: modalText,
