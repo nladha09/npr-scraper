@@ -9,7 +9,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: azure;
-    text-shadow: rgb(253, 252, 252) 0.3em 0.3em 0.3em;
+    text-shadow: rgb(253, 252, 252) 0.1em 0.1em 0.1em;
 }
 
 header {
